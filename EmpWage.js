@@ -43,3 +43,44 @@ function getAttendance() {
     }
 
     getPartTime();
+
+    // Calculate Wages For month with 20 Working days
+
+    function getWagePerMonth() {
+			
+        let empHr = 0;
+        let total = 0;
+        let days = 0;
+        let workHr = 0;
+        
+        while( days<20 ) {
+        let emp =  Math.floor(Math.random() * 10) %  3;
+        
+        switch(emp) { 
+            case 0:
+                console.log("Employee is present");
+                empHr = 8;
+                break;
+            case 1:
+                console.log("Employee is PartTime ");
+                empHr = 4;
+                break;
+            case 2:
+                console.log("Employee is Absent");
+                empHr = 0;
+                break;
+            default:
+                console.log("contition does not exit");
+        }
+        let dailyWage = (SALARY_PER_HR * empHr);
+        total = (total + dailyWage);
+        days = (days + 1);
+        workHr = (workHr + empHr);
+        }
+        console.log("total salary will be :" + total);
+    
+        console.log("total working hours will be:" + workHr);
+        
+    }
+
+    getWagePerMonth();
