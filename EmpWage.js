@@ -11,6 +11,7 @@ function getAttendance() {
     getAttendance();
 
     // UC2 - Ability to calculate daily employee wage
+    // UC3 - Refactoring code to write function
 
     const   PART_TIME_PRESENT = 2;
     const   PART_TIME_WORK_HR = 4;
