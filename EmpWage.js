@@ -8,7 +8,7 @@ function getAttendance() {
         console.log("Employee is present");
     }
 
-    getAttendance();
+    // getAttendance();
 
     // UC2 - Ability to calculate daily employee wage
     // UC3 - Refactoring code to write function
@@ -42,7 +42,7 @@ function getAttendance() {
         
     }
 
-    getPartTime();
+    // getPartTime();
 
     // Calculate Wages For month with 20 Working days
 
@@ -70,7 +70,7 @@ function getAttendance() {
                 empHr = 0;
                 break;
             default:
-                console.log("contition does not exit");
+                console.log("condition does not exit");
         }
         let dailyWage = (SALARY_PER_HR * empHr);
         total = (total + dailyWage);
@@ -83,4 +83,45 @@ function getAttendance() {
         
     }
 
-    getWagePerMonth();
+    // getWagePerMonth();
+
+
+    // UC5 - Calculate Wages Till Condition
+
+    function maxHrsReached() {
+        let empHr = 0;
+        let total = 0;
+        let days = 0;
+        let workHr = 0;
+        
+        while(days < 20 && workHr < 160) {
+        let emp =  Math.floor(Math.random() * 10) %  3;
+        switch(emp) { 
+            case 0:
+                console.log("Employee is present");
+                empHr = 8;
+                break;
+            case 1:
+                console.log("Employee is part time");
+                empHr = 4;
+                break;
+            case 2:
+                console.log("Employee is absent");
+                empHr = 0;
+                break;
+            default:
+                console.log("condition does not exist");
+        }
+        
+        let dailyWage = (SALARY_PER_HR * empHr);
+        total = (total + dailyWage);
+        days = (days+1);
+        workHr = (workHr + empHr);
+        }
+        
+        console.log("totalsalary will be: " + total);
+        console.log("total working days will be: " + days);
+        console.log("total working hours will be: " + workHr);
+    }
+
+    maxHrsReached();
