@@ -93,6 +93,7 @@ function getAttendance() {
         let total = 0;
         let days = 0;
         let workHr = 0;
+        let empDailyWageArr = new Array();
         
         while(days < 20 && workHr < 160) {
         let emp =  Math.floor(Math.random() * 10) %  3;
@@ -117,6 +118,7 @@ function getAttendance() {
         total = (total + dailyWage);
         days = (days+1);
         workHr = (workHr + empHr);
+        empDailyWageArr.push(dailyWage)
         }
         
         console.log("totalsalary will be: " + total);
